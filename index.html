@@ -27,6 +27,28 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+<!--
+  This code will translate page contents automatically (without user input)
+  Settings located at line 9, current script will translate english to estonian
+-->
+<style>#google_translate_element,.skiptranslate{display:none;}body{top:0!important;}</style>
+
+<script>
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en', 
+            includedLanguages: 'et', 
+            autoDisplay: false
+        }, 'google_translate_element');
+        var a = document.querySelector("#google_translate_element select");
+        a.selectedIndex=1;
+        a.dispatchEvent(new Event('change'));
+    }
+</script>
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
   <!-- =======================================================
   * Template Name: iPortfolio - v1.2.1
   * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
@@ -73,6 +95,7 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div id="google_translate_element"></div>
     <div class="hero-container" data-aos="fade-in">
       <h1>Yuvraj Singh Panwar</h1>
       <p>I'm <span class="typed" data-typed-items="Software Engineer, Working for Impetus Technologies Pvt. Ltd"></span></p>
