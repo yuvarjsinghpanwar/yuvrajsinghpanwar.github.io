@@ -12,4 +12,6 @@ function getAge(dateString) {
 
 function addGreetingText() {
     document.getElementById("greeting_txt").innerHTML = "Hello! I am " + getAge("08/12/1999") + " years old, My nickname is Yashu.";
+    document.getElementById("age").innerHTML = getAge("08/12/1999") + " years";
+
 }
